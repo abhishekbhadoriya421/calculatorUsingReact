@@ -8,7 +8,6 @@ export default function CalculatorComponent() {
       {/* Display Component */}
       <div className={style.CalculatorComponent}>
         <DisplayComponent />
-        <hr />
         <KeyboardComponent />
       </div>
     </>
