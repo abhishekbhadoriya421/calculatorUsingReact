@@ -1,0 +1,22 @@
+.display{
+    width: 100%;
+    margin: auto;
+    height: 30%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-top: 10px;
+    background-color: rgb(102 102 102);
+    color: white;
+}
+
+.navBar{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.resultContainer{
+    width: 95%;
+    margin: 22% auto 0px;
+    text-align: end;
+    font-size: 3rem;
+}
