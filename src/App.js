@@ -1,7 +1,8 @@
+import CalculatorComponent from "./component/CalculatorComponent";
 function App() {
   return (
     <div className="App">
-      <h1>this is heading</h1>
+      <CalculatorComponent/>
     </div>
   );
 }
