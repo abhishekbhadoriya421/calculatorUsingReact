@@ -1,4 +1,4 @@
-export default function SpecialButtonComponent(){
+export default function SpecialButtonComponent({handleCurrentValue}){
     const buttonStyle = {
         width:'180px',
         height:'90px',
@@ -11,6 +11,9 @@ export default function SpecialButtonComponent(){
     }
     
     return(<>
-        <button style={buttonStyle}>0</button>
+        <button 
+        style={buttonStyle}
+        onClick={()=> handleCurrentValue("0")}
+        >0</button>
     </>)
 }

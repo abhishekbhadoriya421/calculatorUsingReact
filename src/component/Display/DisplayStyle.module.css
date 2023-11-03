@@ -1,7 +1,7 @@
 .display{
     width: 100%;
     margin: auto;
-    height: 26%;
+    height: 27%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     padding-top: 10px;
@@ -16,6 +16,7 @@
 
 .resultContainer{
     width: 95%;
+    overflow-x: scroll;
     margin: 22% auto 0px;
     text-align: end;
     font-size: 3rem;
