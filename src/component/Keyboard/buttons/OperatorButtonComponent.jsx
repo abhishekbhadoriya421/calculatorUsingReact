@@ -1,4 +1,4 @@
-export default function OperatorComponent({backgroundColor,color,icon}){
+export default function OperatorComponent({icon, handleAction}){
     const buttonStyle = {
         width:'90px',
         height:'90px',
@@ -11,6 +11,6 @@ export default function OperatorComponent({backgroundColor,color,icon}){
         cursor: 'pointer'
     }
     return(<>
-        <button style={buttonStyle}>{icon}</button>
+        <button style={buttonStyle} onClick={()=> handleAction(icon)}>{icon}</button>
     </>)
 }

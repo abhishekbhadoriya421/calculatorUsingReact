@@ -8,29 +8,34 @@ import OperatorComponent from "./buttons/OperatorButtonComponent";
 
 // backgroundColor: '#ff922a',
 // color:'white'
-export default function KeyboardComponent({ handleCurrentValue }) {
+export default function KeyboardComponent({ handleCurrentValue,handleAction }) {
   return (
     <>
       <div className={style.buttonContainer}>
-        <OperatorComponent icon="C" />
-        <OperatorComponent icon="+/-" />
-        <OperatorComponent icon="%" />
-        <OperatorComponent icon="/" />
+        <OperatorComponent icon="C" handleAction={handleAction}/>
+        <OperatorComponent icon="+/-" handleAction={handleAction}/>
+        <OperatorComponent icon="%" handleAction={handleAction}/>
+
+        <OperatorComponent icon="/" handleAction={handleAction}/>
         <ButtonComponent icon="7" handleCurrentValue={handleCurrentValue} />
         <ButtonComponent icon="8" handleCurrentValue={handleCurrentValue} />
         <ButtonComponent icon="9" handleCurrentValue={handleCurrentValue} />
-        <OperatorComponent icon="*" />
+
+        <OperatorComponent icon="*" handleAction={handleAction}/>
         <ButtonComponent icon="4" handleCurrentValue={handleCurrentValue} />
         <ButtonComponent icon="5" handleCurrentValue={handleCurrentValue} />
         <ButtonComponent icon="6" handleCurrentValue={handleCurrentValue} />
-        <OperatorComponent icon="-" />
+
+        <OperatorComponent icon="-" handleAction={handleAction}/>
         <ButtonComponent icon="1" handleCurrentValue={handleCurrentValue} />
         <ButtonComponent icon="2" handleCurrentValue={handleCurrentValue} />
         <ButtonComponent icon="3" handleCurrentValue={handleCurrentValue} />
-        <OperatorComponent icon="+" />
+
+        <OperatorComponent icon="+" handleAction={handleAction}/>
         <SpecialButtonComponent handleCurrentValue={handleCurrentValue} />
-        <ButtonComponent icon="." handleCurrentValue={handleCurrentValue}/>
-        <OperatorComponent icon="=" />
+        <ButtonComponent icon="." handleCurrentValue={handleCurrentValue} />
+
+        <OperatorComponent icon="=" handleAction={handleAction}/>
       </div>
     </>
   );
