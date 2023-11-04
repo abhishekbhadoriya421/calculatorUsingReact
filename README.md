@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Calculator Project Using React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+this calculator web application let you perform all the method and function to do your calculation 
 
-## Available Scripts
+## Available code
 
-In the project directory, you can run:
+>use `npm start` to run code
 
-### `npm start`
+## Used Tools
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React
+- JavaScript
+- HTML
+- CSS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Folder Structure
+-src
+>In src Folder you can find all the code and target the
+-src -> App.js
+>don't manipulate App.js file 
+-src -> component
+-component -> Display -> Keyboard -> CalculatorComponent.jsx
+>CalculatorComponent.jsx file contains all the logic code and Display Folder contain calculator display code  and keyboard folder contains calculator buttons code
 
-### `npm test`
+## Calculator Login
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```js
+switch (action) {
+      case "C": {
+        setFirstOperand(null);
+        setCurrentVal("0");
+        setOperator("");
+        break;
+      }
+      case "=": {
+        if (firstOperand === null || operator === "") {
+          setFirstOperand(null);
+          setCurrentVal("0");
+          setOperator("");
+        } else {
+          let ans = handleCalculation(
+            firstOperand,
+            Number(currentVal),
+            operator
+          );
+          setFirstOperand(null);
+          setCurrentVal(ans);
+          setOperator("");
+        }
+        break;
+      }
+      case "+": {
+        if (operator === "" || firstOperand === null) {
+          setFirstOperand(Number(currentVal));
+          setCurrentVal("");
+          setOperator("+");
+        } else {
+          let ans = handleCalculation(
+            firstOperand,
+            Number(currentVal),
+            operator
+          );
+          setFirstOperand(ans);
+          setOperator("+");
+          setCurrentVal("");
+        }
+        break;
+      }
+}
+```
+>this is the main code 
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
